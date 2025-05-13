@@ -3,7 +3,7 @@ from datetime import timedelta
 
 class Config:
     # Secret key for session manangement and CSRF protection
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-secret-key-here'
 
     # Database config
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///task_manager.db'

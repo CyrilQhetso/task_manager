@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <div class="mt-5 mb-5">
+            <h1 class="display-4">Welcome to Task Manager</h1>
+            <p class="lead">Organize your tasks, boost your productivity.</p>
+            <hr class="my-4">
+            <p>A simple, effective way to manage your daily to-dos with deadlines and priorities.</p>
+            <div class="mt-4">
+                <a href="{{ url_for('main.register') }}" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-user-plus me-2"></i>Register
+                </a>
+                <a href="{{ url_for('main.login') }}" class="btn btn-outline-primary btn-lg">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </a>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-list-check fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Organize Tasks</h5>
+                        <p class="card-text">Create, edit, and delete tasks with ease. Mark them as complete when done.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-filter fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Filter & Sort</h5>
+                        <p class="card-text">Filter tasks by status and priority to focus on what matters most.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Track Deadlines</h5>
+                        <p class="card-text">Set deadlines for your tasks and never miss an important date.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
