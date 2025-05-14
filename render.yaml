@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-task-manager
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn run:app
+    envVars:
+      - key: SECRET_KEY
+        value: 8919dfdbc66925fd2c93e23d637a622a541628172b09509e
