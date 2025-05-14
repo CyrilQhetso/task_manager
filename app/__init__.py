@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from config import Config
 from flask_wtf.csrf import CSRFProtect
+from flask_cors import CORS
 
 # Initilize extensions
 db = SQLAlchemy()
@@ -19,6 +20,7 @@ def create_app(config_class=Config):
     db.init_app(app)
     login_manager.init_app(app)
     csrf.init_app(app)
+    CORS(app, origins=["https://tasks-managementt.netlify.app"])
 
     # Register blueprints
     from app.routes import main
